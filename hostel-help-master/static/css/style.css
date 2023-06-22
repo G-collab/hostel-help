@@ -1,0 +1,254 @@
+/*general start*/
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+:root {
+    --main-height: 3.5rem;
+    --main-block-black: #252525;
+    --main-block-bg: rgba(255, 255, 255, 0.9);
+    --margin-or-padding: 8%;
+    --main-width: 88%;
+    --border-radius: 40px;
+    --box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+
+small {
+    color: red;
+}
+
+button {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: overlay;
+}
+
+a {
+    color: #000000;
+}
+
+footer a, nav a, .enter-button, header a {
+    text-decoration: none;
+}
+
+header, footer {
+    background: var(--main-block-black);
+    color: #ffffff;
+    height: var(--main-height);
+    line-height: var(--main-height);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/*general end*/
+
+
+/*header start*/
+header {
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: var(--box-shadow);
+}
+
+.site-title {
+    font-size: 200%;
+    padding-top: 0.25rem;
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header .fa-circle-user {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 200%;
+}
+/*header end*/
+
+
+/*main start*/
+main {
+    font-size: 120%;
+    text-align: center;
+    padding: var(--main-height) 0 0;
+    background: linear-gradient(#41B562, #9CE4B0);
+    flex: 1 0 auto;
+}
+
+main > * {
+    margin: 2rem auto 0;
+    width: var(--main-width);
+}
+
+main > *:last-child  {
+    margin-bottom: var(--main-height);
+}
+
+.main-block {
+    width: var(--main-width);
+    background: var(--main-block-bg);
+    border-radius: var(--border-radius);
+    max-width: 50rem;
+    padding: 1.7rem;
+    font-size: 120%;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+h1, h2 {
+    color: #ffffff;
+    height: fit-content;
+    display: inline-block;
+    padding-bottom: 0;
+}
+/*main end*/
+
+
+/*form start*/
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+form div {
+    margin: 0;
+}
+
+form > *, .instruction figcaption {
+    margin-top: 1.7rem;
+}
+
+input, textarea, select {
+    border-radius: 0.5rem;
+    background: #ffffff;
+}
+
+input, textarea, select, .enter-button, optgroup {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    display: inline-block;
+    border: none;
+    font-size: 75%;
+    padding: 0.6rem;
+}
+
+input, textarea, select {
+   border: solid #111111 2px;
+}
+
+input, select {
+    width: 100%;
+    height: 2.5rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+textarea {
+    height: 12rem;
+    width: 100%;
+    resize: none;
+}
+/*form end*/
+
+
+/*buttons start*/
+.enter-button {
+    min-width: 10rem;
+    max-width: fit-content;
+    padding: 0 2.5rem;
+    height: var(--main-height);
+    line-height: var(--main-height);
+    font-size: 100%;
+    border-radius: 2.5rem;
+    color: #ffffff;
+    background: var(--main-block-black);
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+}
+
+a.enter-button {
+    font-size: 100%
+}
+/*buttons end*/
+
+
+/*footer start*/
+footer {
+    flex-shrink: 0;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: #ffffff;
+    font-size: 170%;
+    display: flex;
+}
+
+.srs-logo {
+    width: 2rem;
+    margin: 0;
+}
+
+.sr-logo {
+    width: 1.3rem;
+}
+/*footer end*/
+
+
+/*scrollbar start*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+    height: calc(var(--main-height) / 2);
+}
+/*scrollbar start*/
+
+
+@media screen and (min-width: 540px) {
+    header {
+        padding: 0 1.8rem;
+    }
+
+    main {
+        font-size: 130%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        font-size: 140%;
+    }
+}
+
+
+@media screen and (min-width: 1080px) {
+    main {
+        font-size: 150%;
+    }
+}
